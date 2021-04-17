@@ -22,6 +22,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Travels } from './src/screens/Travels';
 import { Plannings } from './src/screens/Plannings';
 import { Countries } from './src/screens/Countries';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faCoffee, faSuitcaseRolling, faPaperPlane, faPassport } from '@fortawesome/free-solid-svg-icons'
+
 
 
 const App: () => Node = () => {
@@ -33,7 +36,18 @@ const App: () => Node = () => {
   const Tab = createBottomTabNavigator();
 
   const HomeNavigator = () => (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={({ route }) => ({
+      tabBarIcon: ({ focused, color, size }) => {
+        let iconName;
+        if (route.name === 'Travels') {
+          return <FontAwesomeIcon icon={faSuitcaseRolling} />
+        } else if (route.name === 'Plannings') {
+          return <FontAwesomeIcon icon={faPaperPlane} />
+        } else if (route.name === 'Countries') {
+          return <FontAwesomeIcon icon={faPassport} />
+        }
+      },
+    })}>
       <Tab.Screen name="Travels" component={Travels} />
       <Tab.Screen name="Plannings" component={Plannings} />
       <Tab.Screen name="Countries" component={Countries} />
