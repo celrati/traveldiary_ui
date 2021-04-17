@@ -1,12 +1,13 @@
 import { Button, Card, Icon, TabBar, WhiteSpace, WingBlank } from '@ant-design/react-native';
 import React from 'react';
 import { Text, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-interface Welcomeprops {
 
-}
 
-export function Welcome(props: Welcomeprops) {
+export function Welcome() {
+
+    const navigation = useNavigation();
 
     return (
         <View style={{ paddingTop: 30 }}>
@@ -27,7 +28,7 @@ export function Welcome(props: Welcomeprops) {
                         </View>
                     </Card.Body>
                     <Card.Footer
-                        content={<Button> enter </Button>}
+                        content={<Button onPress={() => navigation.navigate('Home')}> enter </Button>}
 
                     />
                 </Card>
@@ -47,7 +48,7 @@ export function Welcome(props: Welcomeprops) {
                         </View>
                     </Card.Body>
                     <Card.Footer
-                        content={<Button type="primary"> settings </Button>}
+                        content={<Button  type="primary"> settings </Button>}
 
                     />
                 </Card>

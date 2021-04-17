@@ -2,15 +2,15 @@ import { Button, Card, Icon, TabBar, WhiteSpace, WingBlank } from '@ant-design/r
 import React from 'react';
 import { Text, View } from 'react-native';
 
-interface Homeprops {
+interface Planningsprops {
 
 }
 
-export function Home(props: Homeprops) {
+export function Plannings(props: Planningsprops) {
 
     return (
         <View style={{ paddingTop: 30 }}>
-           <Text> hello home</Text>
+           <Text> hello planning</Text>
         </View>
     )
 }
