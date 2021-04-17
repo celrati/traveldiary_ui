@@ -14,6 +14,7 @@ import {
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { changeCount } from './src/actions/counts'
 import { bindActionCreators } from 'redux';
+import { Home } from './src/pages/Home';
 
 
 
@@ -24,9 +25,7 @@ const App: () => Node = () => {
 
 
   return (
-    <View>
-      <Text>hello achraf ts new count : {count.counter1}</Text>
-    </View>
+    <Home />
   );
 };
 
