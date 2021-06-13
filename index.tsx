@@ -4,7 +4,8 @@ import App from './App';
 import { name as appName } from './app.json';
 import { Provider } from 'react-redux';
 import configureStore from './src/store/configureStore';
-import { Provider as AntProvider } from '@ant-design/react-native';
+import * as eva from '@eva-design/eva';
+import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
 
 
 const store = configureStore()
@@ -12,9 +13,10 @@ const store = configureStore()
 
 const RNRedux = () => (
   <Provider store={store}>
-    <AntProvider>
+    <ApplicationProvider {...eva} theme={eva.light}>
       <App />
-    </AntProvider>
+    </ApplicationProvider>
+
   </Provider>
 
 )

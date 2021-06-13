@@ -22,7 +22,8 @@ import { Travels } from './src/screens/Travels';
 import { Plannings } from './src/screens/Plannings';
 import { Countries } from './src/screens/Countries';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faCoffee, faSuitcaseRolling, faPaperPlane, faPassport } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faSuitcaseRolling, faPaperPlane, faPassport, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import { NewDiary } from './src/screens/NewDiary';
 
 
 
@@ -44,12 +45,14 @@ const App: () => Node = () => {
           return <FontAwesomeIcon icon={faPaperPlane} />
         } else if (route.name === 'Countries') {
           return <FontAwesomeIcon icon={faPassport} />
+        } else if (route.name === 'New') {
+          return <FontAwesomeIcon icon={faPlusSquare} />
         }
       },
     })}>
       <Tab.Screen name="Travels" component={Travels} />
-      <Tab.Screen name="Plannings" component={Plannings} />
-      <Tab.Screen name="Countries" component={Countries} />
+      <Tab.Screen name="New" component={NewDiary} /> 
+      {/* <Tab.Screen name="Countries" component={Countries} /> */}
     </Tab.Navigator>
   )
 
