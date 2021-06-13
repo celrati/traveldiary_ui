@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { Button, Icon, Layout, Spinner, Input } from '@ui-kitten/components';
+import { addDiary } from '../schema/DiarySchema';
 interface NewDiaryProps {
 
 }
@@ -37,7 +38,7 @@ export function NewDiary(props: NewDiaryProps) {
                 placeholder='type your diary here :)'
                 {...multilineInputState}
             />
-            <Button style={styles.button} status='success' >
+            <Button style={styles.button} status='success'  onPress={  async () =>  await  addDiary({ title: 'hu', content: 'j' })} >
                 add this travel to my diaries
             </Button>
 

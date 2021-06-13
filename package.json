@@ -38,7 +38,7 @@
     "react-native-svg": "^12.1.1",
     "react-native-vector-icons": "^8.1.0",
     "react-redux": "^7.2.1",
-    "realm": "^10.4.0",
+    "realm": "^10.4.2",
     "redux": "^4.0.5"
   },
   "devDependencies": {

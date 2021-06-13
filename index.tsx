@@ -16,7 +16,6 @@ const RNRedux = () => (
     <ApplicationProvider {...eva} theme={eva.light}>
       <App />
     </ApplicationProvider>
-
   </Provider>
 
 )
