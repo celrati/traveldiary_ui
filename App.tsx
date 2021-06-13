@@ -14,7 +14,6 @@ import {
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { changeCount } from './src/actions/counts'
 import { bindActionCreators } from 'redux';
-import { Home } from './src/screens/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Welcome } from './src/screens/Welcome';
